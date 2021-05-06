@@ -46,6 +46,7 @@ import laminar from './laminar';
 import litentry from './litentry';
 import manta from './manta';
 import moonbeam from './moonbeam';
+import starfleet from './starfleet';
 import mybank from './mybank';
 import neatcoin from './neatcoin';
 import nftmart from './nftmart';
@@ -139,6 +140,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'mashnet-node': kilt,
   'mathchain-galois': galois,
   'moonbase-alphanet': moonbeam,
+  'node-template': starfleet,
   moonbeam,
   'moonbeam-standalone': moonbeam,
   'mybank.network Testnet': mybank,

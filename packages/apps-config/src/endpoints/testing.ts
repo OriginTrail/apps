@@ -251,6 +251,13 @@ export function createTesting (t: TFunction): LinkOption[] {
       }
     },
     {
+      info: 'starfleetAlpha',
+      text: t('rpc.starfleet', 'Starfleet Testnet', { ns: 'apps-config' }),
+      providers: {
+        'Starfleet Network': 'wss://207.154.225.253'
+      }
+    },
+    {
       info: 'ternoa-chaos',
       text: t('rpc.ternoa-chaos', 'Ternoa Chaos', { ns: 'apps-config' }),
       providers: {
