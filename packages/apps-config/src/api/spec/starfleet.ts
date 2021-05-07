@@ -40,195 +40,13 @@ export const rpcDefinitions: Record<string, Record<string, DefinitionRpc | Defin
 const starfleetDefinitions = {
     rpc: rpcDefinitions,
     types: [
-        // {
-        //     minmax: [0, 4],
-        //     types: {
-        //         AccountId: "EthereumAccountId",
-        //         Address: "AccountId",
-        //         Balance: "u128",
-        //         RefCount: "u8",
-        //         LookupSource: "AccountId",
-        //         Account: {
-        //             nonce: "U256",
-        //             balance: "u128",
-        //         },
-        //     },
-        // },
         {
             minmax: [0, undefined],
             types: {
                 AccountId: "EthereumAccountId",
-                Address: "AccountId",
-                Balance: "u128",
-                LookupSource: "AccountId",
-                Account: {
-                    nonce: "U256",
-                    balance: "u128",
-                },
-                ExtrinsicSignature: "MultiSignature",
+                AccountInfo: "AccountInfoWithRefCount",
             },
         },
-        // {
-        //     minmax: [6, 19],
-        //     types: {
-        //         AccountId: "EthereumAccountId",
-        //         Address: "AccountId",
-        //         Balance: "u128",
-        //         LookupSource: "AccountId",
-        //         Account: {
-        //             nonce: "U256",
-        //             balance: "u128",
-        //         },
-        //         ExtrinsicSignature: "EthereumSignature",
-        //         RoundIndex: "u32",
-        //         Candidate: {
-        //             id: "AccountId",
-        //             fee: "Perbill",
-        //             bond: "Balance",
-        //             nominators: "Vec<Bond>",
-        //             total: "Balance",
-        //             state: "ValidatorStatus",
-        //         },
-        //         Nominator: {
-        //             nominations: "Vec<Bond>",
-        //             total: "Balance",
-        //         },
-        //         Bond: {
-        //             owner: "AccountId",
-        //             amount: "Balance",
-        //         },
-        //         ValidatorStatus: {
-        //             _enum: ["Active", "Idle", { Leaving: "RoundIndex" }],
-        //         },
-        //         TxPoolResultContent: {
-        //             pending: "HashMap<H160, HashMap<U256, PoolTransaction>>",
-        //             queued: "HashMap<H160, HashMap<U256, PoolTransaction>>",
-        //         },
-        //         TxPoolResultInspect: {
-        //             pending: "HashMap<H160, HashMap<U256, Summary>>",
-        //             queued: "HashMap<H160, HashMap<U256, Summary>>",
-        //         },
-        //         TxPoolResultStatus: {
-        //             pending: "U256",
-        //             queued: "U256",
-        //         },
-        //         Summary: "Bytes",
-        //         PoolTransaction: {
-        //             hash: "H256",
-        //             nonce: "U256",
-        //             block_hash: "Option<H256>",
-        //             block_number: "Option<U256>",
-        //             from: "H160",
-        //             to: "Option<H160>",
-        //             value: "U256",
-        //             gas_price: "U256",
-        //             gas: "U256",
-        //             input: "Bytes",
-        //         },
-        //     },
-        // },
-        // {
-        //     minmax: [19, undefined],
-        //     types: {
-        //         AccountId: "EthereumAccountId",
-        //         AccountInfo: "AccountInfoWithProviders",
-        //         Address: "AccountId",
-        //         Balance: "u128",
-        //         LookupSource: "AccountId",
-        //         Account: {
-        //             nonce: "U256",
-        //             balance: "u128",
-        //         },
-        //         ExtrinsicSignature: "EthereumSignature",
-        //         RoundIndex: "u32",
-        //         Candidate: {
-        //             id: "AccountId",
-        //             fee: "Perbill",
-        //             bond: "Balance",
-        //             nominators: "Vec<Bond>",
-        //             total: "Balance",
-        //             state: "CollatorStatus",
-        //         },
-        //         Nominator: {
-        //             nominations: "Vec<Bond>",
-        //             total: "Balance",
-        //         },
-        //         Bond: {
-        //             owner: "AccountId",
-        //             amount: "Balance",
-        //         },
-        //         CollatorStatus: {
-        //             _enum: ["Active", "Idle", { Leaving: "RoundIndex" }],
-        //         },
-        //         TxPoolResultContent: {
-        //             pending: "HashMap<H160, HashMap<U256, PoolTransaction>>",
-        //             queued: "HashMap<H160, HashMap<U256, PoolTransaction>>",
-        //         },
-        //         TxPoolResultInspect: {
-        //             pending: "HashMap<H160, HashMap<U256, Summary>>",
-        //             queued: "HashMap<H160, HashMap<U256, Summary>>",
-        //         },
-        //         TxPoolResultStatus: {
-        //             pending: "U256",
-        //             queued: "U256",
-        //         },
-        //         Summary: "Bytes",
-        //         PoolTransaction: {
-        //             hash: "H256",
-        //             nonce: "U256",
-        //             block_hash: "Option<H256>",
-        //             block_number: "Option<U256>",
-        //             from: "H160",
-        //             to: "Option<H160>",
-        //             value: "U256",
-        //             gas_price: "U256",
-        //             gas: "U256",
-        //             input: "Bytes",
-        //         },
-        //         // Staking inflation
-        //         Range: "RangeBalance",
-        //         RangeBalance: {
-        //             min: "Balance",
-        //             ideal: "Balance",
-        //             max: "Balance",
-        //         },
-        //         RangePerbill: {
-        //             min: "Perbill",
-        //             ideal: "Perbill",
-        //             max: "Perbill",
-        //         },
-        //         InflationInfo: {
-        //             expect: "RangeBalance",
-        //             round: "RangePerbill",
-        //         },
-        //         OrderedSet: "Vec<Bond>",
-        //         Collator: {
-        //             id: "AccountId",
-        //             fee: "Perbill",
-        //             bond: "Balance",
-        //             nominators: "Vec<Bond>",
-        //             total: "Balance",
-        //             state: "CollatorStatus",
-        //         },
-        //         CollatorSnapshot: {
-        //             fee: "Perbill",
-        //             bond: "Balance",
-        //             nominators: "Vec<Bond>",
-        //             total: "Balance",
-        //         },
-        //         SystemInherentData: {
-        //             validation_data: "PersistedValidationData",
-        //             relay_chain_state: "StorageProof",
-        //             downward_messages: "Vec<InboundDownwardMessage>",
-        //             horizontal_messages: "BTreeMap<ParaId, Vec<InboundHrmpMessage>>",
-        //         },
-        //         RoundInfo: {
-        //             current: "RoundIndex",
-        //             first: "BlockNumber",
-        //             length: "u32",
-        //         },
-        //     },
-        // },
     ],
 } as OverrideBundleDefinition;
 
@@ -237,6 +55,6 @@ export default starfleetDefinitions;
 
 export const typesBundle = {
     spec: {
-        "starfleet-alphanet": starfleetDefinitions,
+        "starfleet-testnet": starfleetDefinitions,
     },
 } as OverrideBundleType;

@@ -9,5 +9,5 @@ export const ethereumChains = [
   'moonbeam-alphanet',
   'moonbeam-standalone',
   'moonbeam',
-  'starfleet-alphanet'
+  'starfleet-testnet'
 ];

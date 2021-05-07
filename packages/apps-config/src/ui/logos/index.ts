@@ -93,6 +93,7 @@ import nodeWestlake from './nodes/westlake.png';
 import nodeZeitgeist from './nodes/zeitgeist.png';
 import nodeZenlink from './nodes/zenlink.svg';
 import nodeZero from './nodes/zero.svg';
+import starfleet from './nodes/starfleet.png';
 // last-resort fallback, just something empty
 import emptyLogo from './empty.svg';
 
@@ -147,6 +148,7 @@ export const chainLogos: Record<string, unknown> = [
   ['RioChain CC-1', nodeRiochain],
   ['RioChain Staging', nodeRiochain],
   ['Statemint Test', nodeStatemint],
+  ['Starfleet Testnet', starfleet],
   ['SubDAO PC1', nodeSubDAO],
   ['Subsocial', nodeSubsocial],
   ['Subsocial PC', nodeSubsocial],
@@ -244,6 +246,7 @@ export const nodeLogos: Record<string, unknown> = [
   ['Stafi Node', nodeStafi],
   ['Stafi', nodeStafi],
   ['Statemint Collator', nodeStatemint],
+  ['Starfleet Testnet', starfleet],
   ['subsocial-node', nodeSubsocial],
   ['Subsocial Node', nodeSubsocial],
   ['Subsocial PC', nodeSubsocial],
@@ -377,6 +380,7 @@ export const namedLogos: Record<string, unknown> = {
   snakenet: chainSnakenet,
   'sora-substrate': nodeSora,
   stafi: nodeStafi,
+  starfleetTestnet: starfleet,
   subsocial: nodeSubsocial,
   substrate: nodeSubstrate,
   sunrock: nodeSunrock,

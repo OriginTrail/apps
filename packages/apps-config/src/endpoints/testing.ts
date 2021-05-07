@@ -251,10 +251,10 @@ export function createTesting (t: TFunction): LinkOption[] {
       }
     },
     {
-      info: 'starfleetAlpha',
+      info: 'starfleetTestnet',
       text: t('rpc.starfleet', 'Starfleet Testnet', { ns: 'apps-config' }),
       providers: {
-        'Starfleet Network': 'wss://207.154.225.253'
+        'Trace Labs': 'wss://207.154.225.253'
       }
     },
     {

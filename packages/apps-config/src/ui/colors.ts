@@ -99,6 +99,7 @@ const nodeRiochain = '#1A3BB3';
 const nodeSora = '#2D2926';
 const nodeStafi = '#00F3AB';
 const nodeStatemint = '#86e62a'; // '#98ff98';
+const nodeStarfleet = '#131415';
 const nodeSubDAO = 'linear-gradient(50deg, #F20092 0%, #FF4D5D 100%)';
 const nodeSubsocial = '#b9018c';
 const nodeTernoa = '#d622ff';
@@ -180,6 +181,7 @@ export const chainColors: Record<string, any> = [
   ['RioChain CC-1', chainRiochain],
   ['Riochain Staging', chainRiochain],
   ['Statemint Test', nodeStatemint],
+  ['Starfleet Testnet', nodeStarfleet],
   ['SubDAO PC1', chainSubDAO],
   ['Subsocial PC1', chainSubsocial],
   ['Sunrock', chainSunrock],
@@ -237,6 +239,7 @@ export const nodeColors: Record<string, any> = [
   ['SORA', nodeSora],
   ['Stafi node', nodeStafi],
   ['Statemint Collator', nodeStatemint],
+  ['Starfleet Testnet', nodeStarfleet],
   ['subsocial node', nodeSubsocial],
   ['subzero node', nodeZero],
   ['Ternoa Node', nodeTernoa],
