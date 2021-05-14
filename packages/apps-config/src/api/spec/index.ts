@@ -140,7 +140,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'mashnet-node': kilt,
   'mathchain-galois': galois,
   'moonbase-alphanet': moonbeam,
-  'node-template': starfleet,
+  'starfleet-node': starfleet,
   moonbeam,
   'moonbeam-standalone': moonbeam,
   'mybank.network Testnet': mybank,

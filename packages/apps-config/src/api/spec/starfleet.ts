@@ -43,9 +43,10 @@ const starfleetDefinitions = {
         {
             minmax: [0, undefined],
             types: {
-                AccountId: "EthereumAccountId",
-                AccountInfo: "AccountInfoWithRefCount",
-            },
+              "AccountId": "EthereumAccountId",
+              "AccountInfo": "AccountInfoWithDualRefCount",
+              "ExtrinsicSignature": "EthereumSignature"
+            }
         },
     ],
 } as OverrideBundleDefinition;
